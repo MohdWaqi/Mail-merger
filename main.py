@@ -1,9 +1,13 @@
+############################ Opening the names file that needs to be invited. #################################
+
 with open("Input/Names/invited_names.txt", "r") as names:
     invitation_to = names.readlines()
 new_names = []
 for name in invitation_to:
     person = name.strip("\n")
     new_names.append(person)
+
+############################## replacing the name in the example letter to invited names ##############################
 
 with open("Input/Letters/starting_letter.txt", "r") as doc:
     letter = doc.readlines()
